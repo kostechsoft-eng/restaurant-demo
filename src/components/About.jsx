@@ -1,0 +1,7 @@
+import { FiBriefcase, FiGift, FiHeart, FiUsers } from 'react-icons/fi'
+
+const events = [[FiBriefcase, 'Business Events'], [FiGift, 'Birthdays'], [FiHeart, 'Weddings'], [FiUsers, 'Party & Others']]
+
+export default function About() {
+  return <><section className="section about" id="about"><div className="container about-grid"><div className="about-image-wrap"><img src="/images/about.png" alt="Bagh-One banquet hall prepared for an event" /><span className="image-badge">Food · Fervour · Hospitality</span></div><div className="about-content"><span className="eyebrow">About us</span><h2>Memorable<br />moments,<br /><em>served beautifully.</em></h2><p>At The Bagh-One Restaurant, we understand that every family deserves quality time well spent. Whether dining in or celebrating a special occasion, Bagh-One provides an unparalleled level of food, fervour and personal service under one roof, together with the true spirit of genuine hospitality.</p><p>We aim to provide excellent food and exceptional catering service to every guest—and make them want to visit time and again.</p><div className="event-types">{events.map(([Icon, label]) => <div key={label}><Icon /><span>{label}</span></div>)}</div></div></div></section><section className="reservation-cta"><div><span className="eyebrow light">Make a reservation</span><h2>Make your event fanciful<br />and blissful.</h2><p>Book your celebrations with us and leave the details to our hospitality team.</p></div><a className="button" href="#booking">Book now</a></section></>
+}
